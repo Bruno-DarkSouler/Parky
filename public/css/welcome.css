@@ -1,0 +1,299 @@
+/* Welcome / Onboarding Styles */
+
+:root {
+    --primary-color: #63B38B; /* Green */
+    --primary-hover: #509b75;
+    --secondary-color: #8c9eff; /* Purple light */
+    --secondary-hover: #7b8de6;
+    --btn-pink: #FF9999;
+    --btn-pink-hover: #fa8787;
+    --text-dark: #333333;
+    --text-muted: #666666;
+    --bg-color: #ffffff;
+    --border-color: #e0e0e0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Poppins', 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+}
+
+.slides-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 24px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    transform: translateX(100%);
+}
+
+.slide.slide-active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.slide.slide-exit {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+}
+
+/* Slide 1 (Splash) & Slide 5 (Auth) */
+.splash-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    text-align: center;
+}
+
+.logo-img {
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.logo-text {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.logo-text .park {
+    color: var(--secondary-color);
+}
+
+.logo-text .finder {
+    color: var(--primary-color);
+}
+
+.slogan {
+    font-size: 16px;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.splash-actions {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-pink {
+    background-color: var(--btn-pink);
+    color: white;
+}
+.btn-pink:hover { background-color: var(--btn-pink-hover); }
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+.btn-primary:hover { background-color: var(--primary-hover); }
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--text-dark);
+    border: 1px solid var(--border-color);
+}
+.btn-outline:hover { background-color: #f9f9f9; }
+
+.btn-outline-purple {
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+.btn-outline-purple:hover { background-color: rgba(140, 158, 255, 0.1); }
+
+/* Onboarding Slides */
+.onboarding-img-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.onboarding-img {
+    max-width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+}
+
+.onboarding-text {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.onboarding-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.onboarding-desc {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.onboarding-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+/* Dots */
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    transition: all 0.3s;
+}
+
+.dot.active {
+    background-color: var(--secondary-color);
+}
+
+.footer {
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+}
+
+/* Desktop Horizontal Layout */
+@media (min-width: 768px) {
+    .slide {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr auto auto;
+        gap: 20px 60px;
+        padding: 80px 10%;
+        align-content: stretch;
+        justify-content: center;
+    }
+    
+    .onboarding-img-container {
+        grid-column: 1 / 2;
+        grid-row: 1 / 4;
+        margin-bottom: 0;
+    }
+    
+    .onboarding-img {
+        max-height: 400px;
+    }
+    
+    .onboarding-text {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        text-align: center;
+        align-self: center;
+        margin-bottom: 0;
+    }
+    
+    .onboarding-title {
+        font-size: 32px;
+    }
+    
+    .onboarding-desc {
+        font-size: 16px;
+    }
+    
+    .onboarding-actions {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        flex-direction: row;
+        align-self: start;
+        margin-bottom: 0;
+        margin-top: 20px;
+    }
+    
+    .onboarding-actions .btn {
+        flex: 1;
+    }
+    
+    .dots {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+        justify-content: center;
+        align-self: start;
+        margin-top: 20px;
+    }
+    
+    /* Splash and Login special handling (single column center) */
+    #slide-0, #slide-4 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #slide-0 .splash-actions, #slide-4 .splash-actions {
+        max-width: 400px;
+        width: 100%;
+        margin-top: 40px;
+    }
+    
+    .logo-img {
+        width: 240px;
+    }
+    
+    .logo-text {
+        font-size: 42px;
+    }
+    
+    .slogan {
+        font-size: 20px;
+    }
+}

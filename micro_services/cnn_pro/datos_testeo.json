@@ -1,0 +1,421 @@
+{
+"success": true,
+"message": "Cámaras obtenidas exitosamente.",
+"data": [
+    {
+    "id": "019fedae-e98e-73be-bae5-16c31aece26e",
+    "dvr_id": "019fedae-e985-72b1-a3ac-dad0d50aa98d",
+    "channel": 4,
+    "name": "Cámara Canal 4",
+    "status": 1,
+    "created_at": "2026-08-10T21:58:11.000000Z",
+    "updated_at": "2026-08-10T21:58:11.000000Z",
+    "dvr": {
+        "id": "019fedae-e985-72b1-a3ac-dad0d50aa98d",
+        "user_id": "019f067b-57aa-73e1-be30-a24ad1f42a06",
+        "lat": "-34.60372200",
+        "lon": "-58.38159200",
+        "ip": "debug",
+        "port": 80,
+        "user": "admin",
+        "status": 1,
+        "created_at": "2026-08-10T21:58:11.000000Z",
+        "updated_at": "2026-08-10T21:58:11.000000Z"
+    },
+    "camera_zones": [
+    {
+        "id": "019fedae-e9a2-70de-93ce-6e0d5c1f513c",
+        "camera_id": "019fedae-e98e-73be-bae5-16c31aece26e",
+        "geometry": [
+            {
+                "x1": 259,
+                "x2": 1024,
+                "y1": 87,
+                "y2": 520,
+                "width": 765,
+                "height": 433
+            }
+        ],
+        "total_length_meters": "10.00",
+        "homography_matrix": null,
+        "status": 1,
+        "created_at": "2026-08-10T21:58:11.000000Z",
+        "updated_at": "2026-08-10T21:58:11.000000Z",
+        "occupancy_logs": []
+    },
+    {
+        "id": "019fedae-e9ad-7026-9b8a-9ec709b292fc",
+        "camera_id": "019fedae-e98e-73be-bae5-16c31aece26e",
+        "geometry": [
+            {
+            "x1": 12,
+            "x2": 230,
+            "y1": 90,
+            "y2": 521,
+            "width": 218,
+            "height": 431
+            }
+        ],
+    "total_length_meters": "5.00",
+    "homography_matrix": null,
+    "status": 1,
+    "created_at": "2026-08-10T21:58:11.000000Z",
+    "updated_at": "2026-08-10T21:58:11.000000Z",
+    "occupancy_logs": []
+    }
+    ]
+    },
+    {
+        "id": "019fedac-e2ed-7140-af83-fca7c11a186b",
+        "dvr_id": "019fedac-e2d9-7187-9fd4-5609536b22c3",
+        "channel": 1,
+        "name": "Cámara Canal 1",
+        "status": 1,
+        "created_at": "2026-08-10T21:55:58.000000Z",
+        "updated_at": "2026-08-10T22:02:02.000000Z",
+        "dvr": {
+            "id": "019fedac-e2d9-7187-9fd4-5609536b22c3",
+            "user_id": "019f0639-02d5-70f1-8287-7e9d85c5d28b",
+            "lat": "-34.60372200",
+            "lon": "-58.38159200",
+            "ip": "192.168.1.100",
+            "port": 80,
+            "user": "admin",
+            "status": 1,
+            "created_at": "2026-08-10T21:55:58.000000Z",
+            "updated_at": "2026-08-10T21:55:58.000000Z"
+        },
+        "camera_zones": [
+        {
+            "id": "019fedac-e2f3-7230-8df3-36d63b6fdb3a",
+            "camera_id": "019fedac-e2ed-7140-af83-fca7c11a186b",
+            "geometry": [
+                {
+                "x1": 50,
+                "x2": 190,
+                "y1": 50,
+                "y2": 150
+                }
+            ],
+            "total_length_meters": "5.00",
+            "homography_matrix": null,
+            "status": 1,
+            "created_at": "2026-08-10T21:55:58.000000Z",
+            "updated_at": "2026-08-10T22:02:02.000000Z",
+            "occupancy_logs": [
+                {
+                "id": "019fedb2-7277-71aa-85f2-2ec0480fde09",
+                "camera_zone_id": "019fedac-e2f3-7230-8df3-36d63b6fdb3a",
+                "detected_objects_coords": [],
+                "created_at": "2026-08-10T22:02:03.000000Z"
+                }
+            ]
+        }
+        ]
+    },
+    {
+        "id": "019fdeaf-d5d2-7058-9d26-2f651f1e04aa",
+        "dvr_id": "019fdeaf-d5c9-72ee-9a90-e8030ea2988c",
+        "channel": 1,
+        "name": "Cerrito 4010 (Zona 20m - Esquina Paraná)",
+        "status": 1,
+        "created_at": "2026-08-08T00:04:53.000000Z",
+        "updated_at": "2026-08-08T00:04:53.000000Z",
+        "dvr": {
+        "id": "019fdeaf-d5c9-72ee-9a90-e8030ea2988c",
+        "user_id": "019f0639-02d5-70f1-8287-7e9d85c5d28b",
+        "lat": "-34.52880000",
+        "lon": "-58.55050000",
+        "ip": "192.168.1.104",
+        "port": 8000,
+        "user": "admin",
+        "status": 1,
+        "created_at": "2026-08-08T00:04:53.000000Z",
+        "updated_at": "2026-08-08T00:04:53.000000Z"
+        },
+        "camera_zones": [
+            {
+                "id": "019fdeaf-d5d9-7156-8bd3-4b12e10659d8",
+                "camera_id": "019fdeaf-d5d2-7058-9d26-2f651f1e04aa",
+                "geometry": [
+                {
+                "x": 10,
+                "y": 10
+                },
+                {
+                "x": 500,
+                "y": 10
+                }
+                ],
+                "total_length_meters": "20.00",
+                "homography_matrix": null,
+                "status": 1,
+                "created_at": "2026-08-08T00:04:53.000000Z",
+                "updated_at": "2026-08-08T00:04:53.000000Z",
+                "occupancy_logs": [
+                    {
+                    "id": "019fdeaf-d5dc-70a7-baa4-d4ec3013366e",
+                    "camera_zone_id": "019fdeaf-d5d9-7156-8bd3-4b12e10659d8",
+                    "detected_objects_coords": [
+                    {
+                    "end": 6.5,
+                    "start": 2
+                    }
+                    ],
+                    "created_at": "2026-08-08T00:04:53.000000Z"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "019fdeaf-d464-725a-90ea-bd4fe671de24",
+        "dvr_id": "019fdeaf-d458-700c-8ab5-dd0a115b745f",
+        "channel": 1,
+        "name": "Cerrito 3960 (Zona 25m - Escuela Técnica N°1)",
+        "status": 1,
+        "created_at": "2026-08-08T00:04:52.000000Z",
+        "updated_at": "2026-08-08T00:04:52.000000Z",
+        "dvr": {
+        "id": "019fdeaf-d458-700c-8ab5-dd0a115b745f",
+        "user_id": "019f0639-02d5-70f1-8287-7e9d85c5d28b",
+        "lat": "-34.52920000",
+        "lon": "-58.54980000",
+        "ip": "192.168.1.103",
+        "port": 8000,
+        "user": "admin",
+        "status": 1,
+        "created_at": "2026-08-08T00:04:52.000000Z",
+        "updated_at": "2026-08-08T00:04:52.000000Z"
+        },
+        "camera_zones": [
+        {
+            "id": "019fdeaf-d467-7084-ad59-c3f1c745ca55",
+            "camera_id": "019fdeaf-d464-725a-90ea-bd4fe671de24",
+            "geometry": [
+                {
+                "x": 10,
+                "y": 10
+                },
+                {
+                "x": 500,
+                "y": 10
+                }
+            ],
+            "total_length_meters": "25.00",
+            "homography_matrix": null,
+            "status": 1,
+            "created_at": "2026-08-08T00:04:52.000000Z",
+            "updated_at": "2026-08-08T00:04:52.000000Z",
+            "occupancy_logs": [
+                {
+                    "id": "019fdeaf-d46e-728d-b9f4-6b137b5e53a3",
+                    "camera_zone_id": "019fdeaf-d467-7084-ad59-c3f1c745ca55",
+                    "detected_objects_coords": [
+                    {
+                    "end": 4.5,
+                    "start": 0
+                    },
+                    {
+                    "end": 16.5,
+                    "start": 12
+                    }
+                    ],
+                    "created_at": "2026-08-08T00:04:53.000000Z"
+                }
+            ]
+        }
+        ]
+    },
+    {
+    "id": "019fdeaf-d17f-71f2-831a-29237d61354b",
+    "dvr_id": "019fdeaf-d179-70df-a29e-5e7f4e1e9bfa",
+    "channel": 1,
+    "name": "Av. Corrientes 2400 (Zona 30m)",
+    "status": 1,
+    "created_at": "2026-08-08T00:04:52.000000Z",
+    "updated_at": "2026-08-08T00:04:52.000000Z",
+    "dvr": {
+    "id": "019fdeaf-d179-70df-a29e-5e7f4e1e9bfa",
+    "user_id": "019f0639-02d5-70f1-8287-7e9d85c5d28b",
+    "lat": "-34.60370000",
+    "lon": "-58.38160000",
+    "ip": "192.168.1.101",
+    "port": 8000,
+    "user": "admin",
+    "status": 1,
+    "created_at": "2026-08-08T00:04:52.000000Z",
+    "updated_at": "2026-08-08T00:04:52.000000Z"
+    },
+    "camera_zones": [
+    {
+    "id": "019fdeaf-d182-7281-9347-20c5091f0a48",
+    "camera_id": "019fdeaf-d17f-71f2-831a-29237d61354b",
+    "geometry": [
+    {
+    "x": 10,
+    "y": 10
+    },
+    {
+    "x": 500,
+    "y": 10
+    }
+    ],
+    "total_length_meters": "30.00",
+    "homography_matrix": null,
+    "status": 1,
+    "created_at": "2026-08-08T00:04:52.000000Z",
+    "updated_at": "2026-08-08T00:04:52.000000Z",
+    "occupancy_logs": [
+    {
+    "id": "019fdeaf-d185-7219-b9bd-27b979d7fe3b",
+    "camera_zone_id": "019fdeaf-d182-7281-9347-20c5091f0a48",
+    "detected_objects_coords": [
+    {
+    "end": 5,
+    "start": 0
+    },
+    {
+    "end": 17,
+    "start": 12
+    }
+    ],
+    "created_at": "2026-08-08T00:04:52.000000Z"
+    }
+    ]
+    }
+    ]
+    },
+    {
+    "id": "019fdeaf-d2e6-7246-a5ac-51eec9675582",
+    "dvr_id": "019fdeaf-d2df-7045-b7ae-aa6244d53f4a",
+    "channel": 1,
+    "name": "Av. San Martín 1200 (Zona 15m)",
+    "status": 1,
+    "created_at": "2026-08-08T00:04:52.000000Z",
+    "updated_at": "2026-08-08T00:04:52.000000Z",
+    "dvr": {
+    "id": "019fdeaf-d2df-7045-b7ae-aa6244d53f4a",
+    "user_id": "019f0639-02d5-70f1-8287-7e9d85c5d28b",
+    "lat": "-34.59500000",
+    "lon": "-58.39000000",
+    "ip": "192.168.1.102",
+    "port": 8000,
+    "user": "admin",
+    "status": 1,
+    "created_at": "2026-08-08T00:04:52.000000Z",
+    "updated_at": "2026-08-08T00:04:52.000000Z"
+    },
+    "camera_zones": [
+    {
+    "id": "019fdeaf-d2ed-738e-9a93-9d33c7caaa6e",
+    "camera_id": "019fdeaf-d2e6-7246-a5ac-51eec9675582",
+    "geometry": [
+    {
+    "x": 10,
+    "y": 10
+    },
+    {
+    "x": 500,
+    "y": 10
+    }
+    ],
+    "total_length_meters": "15.00",
+    "homography_matrix": null,
+    "status": 1,
+    "created_at": "2026-08-08T00:04:52.000000Z",
+    "updated_at": "2026-08-08T00:04:52.000000Z",
+    "occupancy_logs": [
+    {
+    "id": "019fdeaf-d2f1-703f-8f06-e080da6eaf1f",
+    "camera_zone_id": "019fdeaf-d2ed-738e-9a93-9d33c7caaa6e",
+    "detected_objects_coords": [
+    {
+    "end": 4.5,
+    "start": 0
+    },
+    {
+    "end": 10,
+    "start": 5.5
+    },
+    {
+    "end": 15,
+    "start": 11
+    }
+    ],
+    "created_at": "2026-08-08T00:04:53.000000Z"
+    }
+    ]
+    }
+    ]
+    },
+    {
+    "id": "019fdeaf-cff3-71b3-98a3-9dd4ef0e589f",
+    "dvr_id": "019fdeaf-cfec-70c5-836e-c7a647227544",
+    "channel": 1,
+    "name": "Calle Ader 1500 (Zona 20m)",
+    "status": 1,
+    "created_at": "2026-08-08T00:04:51.000000Z",
+    "updated_at": "2026-08-08T00:04:51.000000Z",
+    "dvr": {
+    "id": "019fdeaf-cfec-70c5-836e-c7a647227544",
+    "user_id": "019f0639-02d5-70f1-8287-7e9d85c5d28b",
+    "lat": "-34.56800000",
+    "lon": "-58.45600000",
+    "ip": "192.168.1.100",
+    "port": 8000,
+    "user": "admin",
+    "status": 1,
+    "created_at": "2026-08-08T00:04:51.000000Z",
+    "updated_at": "2026-08-08T00:04:51.000000Z"
+    },
+    "camera_zones": [
+    {
+    "id": "019fdeaf-cffa-7227-9022-407c3e0f696e",
+    "camera_id": "019fdeaf-cff3-71b3-98a3-9dd4ef0e589f",
+    "geometry": [
+    {
+    "x": 10,
+    "y": 10
+    },
+    {
+    "x": 500,
+    "y": 10
+    }
+    ],
+    "total_length_meters": "20.00",
+    "homography_matrix": null,
+    "status": 1,
+    "created_at": "2026-08-08T00:04:51.000000Z",
+    "updated_at": "2026-08-08T00:04:51.000000Z",
+    "occupancy_logs": [
+    {
+    "id": "019fdeaf-cffe-725f-b65b-f3a2ece77fe8",
+    "camera_zone_id": "019fdeaf-cffa-7227-9022-407c3e0f696e",
+    "detected_objects_coords": [
+    {
+    "end": 4.5,
+    "start": 0
+    },
+    {
+    "end": 14.5,
+    "start": 10
+    }
+    ],
+    "created_at": "2026-08-08T00:04:52.000000Z"
+    }
+    ]
+    }
+    ]
+    }
+],
+"pagination": {
+"current_page": 1,
+"last_page": 1,
+"per_page": 10,
+"total": 7,
+"has_more_pages": false,
+"next_page_url": null,
+"prev_page_url": null
+}
+}

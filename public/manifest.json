@@ -1,0 +1,16 @@
+{
+  "name": "Parking Finder",
+  "short_name": "ParkFinder",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4285F4",
+  "icons": [
+    {
+      "src": "/resources/img/logo1.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any"
+    }
+  ]
+}

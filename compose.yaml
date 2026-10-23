@@ -1,0 +1,85 @@
+services:
+    laravel.test:
+        container_name: parking_finder
+        build:
+            context: './vendor/laravel/sail/runtimes/8.5'
+            dockerfile: Dockerfile
+            args:
+                WWWGROUP: '${WWWGROUP}'
+        image: 'sail-8.5/app'
+        ports:
+          - '6767:80'
+        environment:
+            WWWUSER: '${WWWUSER}'
+            LARAVEL_SAIL: 1
+            XDEBUG_MODE: '${SAIL_XDEBUG_MODE:-off}'
+            XDEBUG_CONFIG: '${SAIL_XDEBUG_CONFIG:-client_host=host.docker.internal}'
+            IGNITION_LOCAL_SITES_PATH: '${PWD}'
+        volumes:
+            - '.:/var/www/html'
+        depends_on:
+            - pgsql
+    pgsql:
+        container_name: parking_finder_db
+        image: 'postgres:18-alpine'
+        environment:
+            PGPASSWORD: '${DB_PASSWORD:-secret}'
+            POSTGRES_DB: '${DB_DATABASE}'
+            POSTGRES_USER: '${DB_USERNAME}'
+            POSTGRES_PASSWORD: '${DB_PASSWORD:-secret}'
+        ports:
+            - '5432:5432'
+        volumes:
+            - './db-data:/var/lib/postgresql'
+            - './vendor/laravel/sail/database/pgsql/create-testing-database.sql:/docker-entrypoint-initdb.d/10-create-testing-database.sql'
+        healthcheck:
+            test:
+                - CMD
+                - pg_isready
+                - '-q'
+                - '-d'
+                - '${DB_DATABASE}'
+                - '-U'
+                - '${DB_USERNAME}'
+            retries: 3
+            timeout: 5s
+    cnn_pro:
+        container_name: cnn_pro
+        build:
+            context: ./micro_services/cnn_pro
+            dockerfile: Dockerfile
+        restart: unless-stopped
+        depends_on:
+            - dvr_connector
+        volumes:
+            - ./micro_services/cnn_pro:/app
+        environment:
+            - PYTHONUNBUFFERED=1
+            - APP_ENV=production
+        working_dir: /app
+
+        # ports:
+        # - "8000:8000" # Mapea PUERTO_HOST:PUERTO_CONTENEDOR
+
+    dvr_connector:
+        container_name: dvr_connector
+        build:
+            context: ./micro_services/dvr_connector
+            dockerfile: Dockerfile
+        restart: unless-stopped
+        depends_on:
+            - pgsql
+        volumes:
+            - ./micro_services/dvr_connector:/app
+        ports:
+            - "8001:8000"
+        environment:
+            - PYTHONUNBUFFERED=1
+            - DB_HOST=parking_finder_db
+            - DB_PORT=5432
+            - DB_DATABASE=${DB_DATABASE}
+            - DB_USERNAME=${DB_USERNAME}
+            - DB_PASSWORD=${DB_PASSWORD:-secret}
+            - IS_DEBUG=${IS_DEBUG:-false}
+
+

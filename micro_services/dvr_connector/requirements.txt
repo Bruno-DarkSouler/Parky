@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+psycopg2-binary
+onvif-zeep
+opencv-python-headless
+python-dotenv
+numpy
+requests
+
