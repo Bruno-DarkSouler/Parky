@@ -41,6 +41,13 @@
                 </div>
                 <i data-feather="chevron-right" class="text-muted"></i>
             </a>
+            <a href="{{ route('personas.panel') }}" class="mobile-menu-item">
+                <div class="flex-center">
+                    <i data-feather="users" class="mobile-menu-icon text-secondary"></i>
+                    <span class="fw-medium">Panel de personas</span>
+                </div>
+                <i data-feather="chevron-right" class="text-muted"></i>
+            </a>
             <a href="{{ route('app.settings') }}" class="mobile-menu-item">
                 <div class="flex-center">
                     <i data-feather="settings" class="mobile-menu-icon text-secondary"></i>

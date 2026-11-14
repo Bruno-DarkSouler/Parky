@@ -29,7 +29,9 @@ class CheckLocationCookie
             'location', 
             'auth.redirect',
             'logout',
-            'map'
+            'map',
+            'personas.panel',
+            'app.personas'
         ];
 
         $currentRouteName = $request->route() ? $request->route()->getName() : null;

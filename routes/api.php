@@ -8,6 +8,7 @@ use App\Http\Controllers\Api\IotController;
 use App\Http\Controllers\Api\ParkingController;
 use App\Http\Controllers\Api\AndroidAutoController;
 use App\Http\Controllers\Api\CnnProController;
+use App\Http\Controllers\Api\PeopleCountController;
 
 Route::prefix('v1')->group(function () {
     
@@ -21,6 +22,14 @@ Route::prefix('v1')->group(function () {
 
     // Cars
     Route::apiResource('cars', CarController::class);
+
+    // People Count / Medición de Personas
+    Route::get('people', [PeopleCountController::class, 'index']);
+    Route::post('people', [PeopleCountController::class, 'store']);
+    Route::get('people/sum', [PeopleCountController::class, 'sum']);
+    Route::get('personas', [PeopleCountController::class, 'index']);
+    Route::post('personas', [PeopleCountController::class, 'store']);
+    Route::get('personas/suma', [PeopleCountController::class, 'sum']);
 
     // CNN PRO Endpoints (Protegidos por Token)
     Route::prefix('cnn')->middleware('cnn.token')->group(function () {
@@ -39,6 +48,14 @@ Route::prefix('v1')->group(function () {
     // Android Auto
     Route::get('android-auto/nearby', [AndroidAutoController::class, 'nearby']);
 });
+
+// People Count Endpoints (Direct alias routes)
+Route::get('people', [PeopleCountController::class, 'index']);
+Route::post('people', [PeopleCountController::class, 'store']);
+Route::get('people/sum', [PeopleCountController::class, 'sum']);
+Route::get('personas', [PeopleCountController::class, 'index']);
+Route::post('personas', [PeopleCountController::class, 'store']);
+Route::get('personas/suma', [PeopleCountController::class, 'sum']);
 
 // CNN PRO Endpoints (Direct alias routes protegidos por Token)
 Route::prefix('cnn')->middleware('cnn.token')->group(function () {

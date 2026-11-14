@@ -51,6 +51,10 @@
                     <i data-feather="clock"></i>
                     <span>Historial</span>
                 </a>
+                <a href="{{ route('personas.panel') }}" class="desktop-nav-link @yield('nav_personas_active')">
+                    <i data-feather="users"></i>
+                    <span>Personas</span>
+                </a>
                 <a href="{{ route('app.settings') }}" class="desktop-nav-link @yield('nav_settings_active')">
                     <i data-feather="settings"></i>
                     <span>Configuración</span>

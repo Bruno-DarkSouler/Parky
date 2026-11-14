@@ -48,6 +48,10 @@ Route::get('/register', function () {
     return view('register');
 })->name('register');
 
+// Panel de Personas (Monitoreo de Evento)
+Route::view('/personas', 'personas')->name('personas.panel');
+Route::view('/panel-personas', 'personas');
+
 // Auth routes
 Route::middleware('auth')->group(function () {
 
